@@ -1,14 +1,8 @@
-type JSONValue2 =
-  | null
-  | boolean
-  | number
-  | string
-  | JSONValue2[]
-  | { [key: string]: JSONValue2 };
+import { JSONValue } from "./types/types";
 
-type Fn4 = (...args: JSONValue2[]) => void;
+type Fn4 = (...args: JSONValue[]) => void;
 
-function cancellable(fn: Fn4, args: JSONValue2[], t: number): Function {
+function cancellable(fn: Fn4, args: JSONValue[], t: number): Function {
   let timerId: ReturnType<typeof setTimeout> | null = null;
 
   const cancelFn = () => {

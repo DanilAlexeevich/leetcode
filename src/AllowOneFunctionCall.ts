@@ -1,11 +1,6 @@
-type JSONValue1 =
-  | null
-  | boolean
-  | number
-  | string
-  | JSONValue1[]
-  | { [key: string]: JSONValue1 };
-type OnceFn = (...args: JSONValue1[]) => JSONValue1 | undefined;
+import { JSONValue } from "./types/types";
+
+type OnceFn = (...args: JSONValue[]) => JSONValue | undefined;
 
 const fn3 = (a, b, c) => a * b * c;
 

@@ -1,4 +1,4 @@
-type JSONValue = null | boolean | number | string | JSONValue[] | { [key: string]: JSONValue };
+import { JSONValue } from "./types/types";
 
 function argumentsLength(...args: JSONValue[]): number {
   return args.length;
